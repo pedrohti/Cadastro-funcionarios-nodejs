@@ -1,6 +1,7 @@
 ## Cadastro de Funcionarios
 
 > CRUD simples criado nas aulas de NodeJS da faculdade
+
 > Simple CRUD from my NodeJS lessons on high school
 
 ### Start
@@ -8,7 +9,7 @@
 ```
 cd Cadastro-funcionarios-nodejs
 ```
-```java script
+```
 node app
 ```
 
