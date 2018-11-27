@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body class="container">
+    <h1>Cadastro de Funcionários</h1>
+    <br>
+
+    <form action="/funcionarios/salvar?id=<%=conteudo%>" method="POST">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control" id="nome" name="nome" value="<%=dadosFuncionario[0].nome%>" placeholder="Nome do Funcionario">
+        </div>
+        <div class="form-group">
+          <label for="funcao">Função</label>
+          <input type="text" class="form-control" id="funcao" name="funcao" value="<%=dadosFuncionario[0].funcao%>" placeholder="Função do funcionário">
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade</label>
+          <input type="text" class="form-control" id="cidade" name="cidade" value="<%=dadosFuncionario[0].cidade%>" placeholder="Cidade do funcionário">
+        </div>
+        <div class="form-group">
+          <label for="departamento">Departamento</label>
+          <input type="text" class="form-control" id="departamento" name="departamento" value="<%=dadosFuncionario[0].departamento%>" placeholder="Departamento do funcionário">
+        </div>
+        <div class="form-group">
+          <label for="salario">Salario</label>
+          <input type="text" class="form-control" id="salario" name="salario" value="<%=dadosFuncionario[0].salario%>" placeholder="Salario do funcionário">
+        </div>
+        <button type="submit" class="btn btn-dark">Cadastrar</button>
+      </form>
+      <br>
+      <a href="/" class="badge badge-pill badge-dark">Home</a>
+</body>
+</html>

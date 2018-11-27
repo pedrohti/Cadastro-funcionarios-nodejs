@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Funcionários</title>
+</head>
+<body class="container">
+    <h1>Listagem de todos os funcionários</h1>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Função</th>
+            <th scope="col">Departamento</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+            <%funcionarios.forEach(x => { %>
+                <tr>
+                    <td><a href='/funcionarioindividual?id=<%=x._id%>'><%=x.nome%></a></td>
+                    <td><%=x.funcao%></td>
+                    <td><%=x.departamento%></td>
+                    <td>
+                        <a href='/funcionarios/alterar?id=<%=x._id%>' class="badge badge-pill badge-dark">Alterar</a>
+                        <a href='/funcionarios/excluir?id=<%=x._id%>' class="badge badge-pill badge-dark">Excluir</a>
+                    </td>
+                </tr>
+            <%})%>
+        </tbody>
+    </table>
+    <br>
+    <a href="/" class="badge badge-pill badge-dark">Home</a>
+</body>
+</html>
